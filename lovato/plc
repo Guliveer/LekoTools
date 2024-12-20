@@ -1,0 +1,269 @@
+parameters :
+({
+	name : "TEMP_COMBO+"
+	canInterface : "vcan0"
+	canId : 0x13
+	canDlc : 6
+	canDataMask : 0xFFFFFFFF00000000L
+	canDataValue : 0x0100020DL
+	bitMask : 0xFFFF0000L
+	type : "int16"
+	multiplier : 0.1
+	precision : 1
+},
+{
+	name : "TEMP_COMBO-"
+	canInterface : "vcan0"
+	canId : 0x13
+	canDlc : 6
+	canDataMask : 0xFFFFFFFF00000000L
+	canDataValue : 0x0200020DL
+	bitMask : 0xFFFF0000L
+	type : "int16"
+	multiplier : 0.1
+	precision : 1
+},
+{
+	name : "TEMP_OUTPUT_MODULE"
+	canInterface : "vcan0"
+	canId : 0x13
+	canDlc : 6
+	canDataMask : 0xFFFFFFFF00000000L
+	canDataValue : 0x0400020DL
+	bitMask : 0xFFFF0000L
+	type : "int16"
+	multiplier : 0.1
+	precision : 1
+},
+{
+	name : "RemainingTimeToBulkSoC"
+	canInterface : "vcan0"
+	canId : 0x625
+	canDlc : 8
+	canDataMask : 0x0
+	canDataValue : 0x0
+	bitMask : 0xFFFFFFFFL
+	type : "uint32"
+},
+{
+	name : "RemainingTimeToFullSoC"
+	canInterface : "vcan0"
+	canId : 0x625
+	canDlc : 8
+	canDataMask : 0x0
+	canDataValue : 0x0
+	bitMask : 0xFFFFFFFF00000000L
+	type : "uint32"
+},
+{
+	name : "SOC"
+	canInterface : "vcan0"
+	canId : 0x620
+	canDlc : 8
+	canDataMask : 0x0
+	canDataValue : 0x0
+	bitMask : 0x0000FF0000000000L
+	type : "uint8"
+},
+{
+	name : "EVSEMaximumVoltageLimit"
+	canInterface : "vcan0"
+	canId : 0x521
+	canDlc : 8
+	canDataMask : 0x0
+	canDataValue : 0x0
+	bitMask : 0x000000000000FFFFL
+	type : "uint16"
+	multiplier : 0.1
+	precision : 1
+},
+{
+	name : "EVSEMaximumCurrentLimit"
+	canInterface : "vcan0"
+	canId : 0x521
+	canDlc : 8
+	canDataMask : 0x0
+	canDataValue : 0x0
+	bitMask : 0x00000000FFFF0000L
+	type : "uint16"
+	multiplier : 0.1
+	precision : 1
+},
+{
+	name : "EVSEMaximumPowerLimit"
+	canInterface : "vcan0"
+	canId : 0x522
+	canDlc : 8
+	canDataMask : 0x0
+	canDataValue : 0x0
+	bitMask : 0xFFFF000000000000L
+	type : "uint16"
+},
+{
+	name : "EVMaximumCurrentLimit"
+	canInterface : "vcan0"
+	canId : 0x621
+	canDlc : 8
+	canDataMask : 0x0
+	canDataValue : 0x0
+	bitMask : 0x00000000FFFF0000L
+	type : "uint16"
+	multiplier : 0.1
+	precision : 1
+},
+{
+	name : "EVMaximumVoltageLimit"
+	canInterface : "vcan0"
+	canId : 0x621
+	canDlc : 8
+	canDataMask : 0x0
+	canDataValue : 0x0
+	bitMask : 0x000000000000FFFFL
+	type : "uint16"
+	multiplier : 0.1
+	precision : 1
+},
+
+{
+	name : "ENERGY_ACTIVE_IMPORT_REGISTERS_INLET"
+	canInterface : "vcan0"
+	canId : 0x13
+	canDlc : 8
+	canDataMask : 0xFFFFFFFF00000000L
+	canDataValue : 0x321B2111L
+	bitMask : 0xFFFFFFFFL
+	type : "uint32"
+	precision : 2
+	multiplier : 0.01
+},
+{
+	name : "POWER_ACTIVE_IMPORT_INLET"
+	canInterface : "vcan0"
+	canId : 0x13
+	canDlc : 8
+	canDataMask : 0xFFFFFFFF00000000L
+	canDataValue : 0x32003A11L
+	bitMask : 0xFFFFFFFFL
+	type : "uint32"
+	precision : 2
+	multiplier : 0.00001
+},
+{
+	name : "CURRENT_IMPORT_INLET_L1"
+	canInterface : "vcan0"
+	canId : 0x13
+	canDlc : 8
+	canDataMask : 0xFFFFFFFF00000000L
+	canDataValue : 0x32000811L
+	bitMask : 0xFFFFFFFFL
+	type : "uint32"
+	precision : 2
+	multiplier : 0.0001
+},
+{
+	name : "CURRENT_IMPORT_INLET_L2"
+	canInterface : "vcan0"
+	canId : 0x13
+	canDlc : 8
+	canDataMask : 0xFFFFFFFF00000000L
+	canDataValue : 0x32000A11L
+	bitMask : 0xFFFFFFFFL
+	type : "uint32"
+	precision : 2
+	multiplier : 0.0001
+},
+{
+	name : "CURRENT_IMPORT_INLET_L3"
+	canInterface : "vcan0"
+	canId : 0x13
+	canDlc : 8
+	canDataMask : 0xFFFFFFFF00000000L
+	canDataValue : 0x32000C11L
+	bitMask : 0xFFFFFFFFL
+	type : "uint32"
+	precision : 2
+	multiplier : 0.0001
+},
+{
+	name : "VOLTAGE_INLET_L1"
+	canInterface : "vcan0"
+	canId : 0x13
+	canDlc : 8
+	canDataMask : 0xFFFFFFFF00000000L
+	canDataValue : 0x32000211L
+	bitMask : 0xFFFFFFFFL
+	type : "uint32"
+	precision : 2
+	multiplier : 0.01
+},
+{
+	name : "VOLTAGE_INLET_L2"
+	canInterface : "vcan0"
+	canId : 0x13
+	canDlc : 8
+	canDataMask : 0xFFFFFFFF00000000L
+	canDataValue : 0x32000411L
+	bitMask : 0xFFFFFFFFL
+	type : "uint32"
+	precision : 2
+	multiplier : 0.01
+},
+{
+	name : "VOLTAGE_INLET_L3"
+	canInterface : "vcan0"
+	canId : 0x13
+	canDlc : 8
+	canDataMask : 0xFFFFFFFF00000000L
+	canDataValue : 0x32000611L
+	bitMask : 0xFFFFFFFFL
+	type : "uint32"
+	precision : 2
+	multiplier : 0.01
+},
+
+{
+	name = "CURRENT_IMPORT_OUTLET"
+	canInterface = "can0"
+	canId = 0x8c10ff22
+	canDlc = 8
+	bitMask = 0x00000000FFFFFFFFL
+	bitSequence = [24, 25, 26, 27, 28, 29, 30, 31, 16, 17, 18, 19, 20, 21, 22, 23, 8, 9, 10, 11, 12, 13, 14, 15, 0, 1, 2, 3, 4, 5, 6, 7 ]
+	type = "int32"
+	precision = 2
+	multiplier = 0.01
+},
+{
+	name = "ENERGY_ACTIVE_IMPORT_REGISTERS_OUTLET"
+	canInterface = "can0"
+	canId = 0x9812ff22
+	canDlc = 8
+	bitMask: 0xFFFFFFFFFFFFFFFFL
+	type: "uint64"
+	multiplier: 0.1
+	bitSequence = [56, 57, 58, 59, 60, 61, 62, 63, 48, 49, 50, 51, 52, 53, 54, 55, 40, 41, 42, 43, 44, 45, 46, 47, 32, 33, 34, 35, 36, 37, 38, 39, 24, 25, 26, 27, 28, 29, 30, 31, 16, 17, 18, 19, 20, 21, 22, 23, 8, 9, 10, 11, 12, 13, 14, 15, 0, 1, 2, 3, 4, 5, 6, 7]
+	precision = 2
+	unit = "Wh"
+},
+{
+	name = "POWER_ACTIVE_IMPORT_OUTLET"
+	canInterface = "can0"
+	canId = 0x9811ff22
+	canDlc = 8
+	bitMask: 0xFFFFFFFF00000000L
+	type: "int32"
+	multiplier: 0.01
+	bitSequence = [24, 25, 26, 27, 28, 29, 30, 31, 16, 17, 18, 19, 20, 21, 22, 23, 8, 9, 10, 11, 12, 13, 14, 15, 0, 1, 2, 3, 4, 5, 6, 7 ]
+	precision: 2
+},
+{
+	name = "VOLTAGE_OUTLET"
+	canInterface = "can0"
+	canId = 0x8c10ff22
+	canDlc = 8
+	bitMask = 0xFFFFFFFF00000000L
+	bitSequence = [24, 25, 26, 27, 28, 29, 30, 31, 16, 17, 18, 19, 20, 21, 22, 23, 8, 9, 10, 11, 12, 13, 14, 15, 0, 1, 2, 3, 4, 5, 6, 7 ]
+	type = "int32"
+	precision = 2
+	multiplier = 0.01
+
+})
